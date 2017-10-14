@@ -18,8 +18,10 @@ app.get('/status', (req, res, next) => {
 });
 
 app.post('/register', (req, res, next) => {
+    console.log("server: hi from register!");
     res.send({
-        message: "You are registered!"
+        message: 'Hello, You are registered!',
+        credentials: req.body.email
     })
 })
 
